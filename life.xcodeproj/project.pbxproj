@@ -29,9 +29,34 @@
 		044E8B8C2E4A915D004D680A /* lifeUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = lifeUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
 
+/* Begin PBXFileSystemSynchronizedBuildFileExceptionSet section */
+		044E8BA72E4A9305004D680A /* Exceptions for "life" folder in "life" target */ = {
+			isa = PBXFileSystemSynchronizedBuildFileExceptionSet;
+			membershipExceptions = (
+				cell.swift,
+				engine.swift,
+				main.swift,
+			);
+			target = 044E8B732E4A915C004D680A /* life */;
+		};
+		044E8BA82E4A9305004D680A /* Exceptions for "life" folder in "lifeUITests" target */ = {
+			isa = PBXFileSystemSynchronizedBuildFileExceptionSet;
+			membershipExceptions = (
+				cell.swift,
+				engine.swift,
+				main.swift,
+			);
+			target = 044E8B8B2E4A915D004D680A /* lifeUITests */;
+		};
+/* End PBXFileSystemSynchronizedBuildFileExceptionSet section */
+
 /* Begin PBXFileSystemSynchronizedRootGroup section */
 		044E8B762E4A915C004D680A /* life */ = {
 			isa = PBXFileSystemSynchronizedRootGroup;
+			exceptions = (
+				044E8BA72E4A9305004D680A /* Exceptions for "life" folder in "life" target */,
+				044E8BA82E4A9305004D680A /* Exceptions for "life" folder in "lifeUITests" target */,
+			);
 			path = life;
 			sourceTree = "<group>";
 		};
