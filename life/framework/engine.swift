@@ -13,17 +13,17 @@ class Engine {
     }
     
     func neighbors(of cell: Cell) -> [Cell] {
-        var results: [Cell] = []
+        var neighbors: [Cell] = []
         
         for dx in -1...1 {
             for dy in -1...1 {
                 if dx != 0 || dy != 0 {
-                    results.append(Cell(x: cell.x + dx, y: cell.y + dy))
+                    neighbors.append(Cell(x: cell.x + dx, y: cell.y + dy))
                 }
             }
         }
         
-        return results
+        return neighbors
     }
     
     func step() {
