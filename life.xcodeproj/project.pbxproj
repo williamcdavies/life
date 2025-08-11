@@ -33,16 +33,16 @@
 		044E8BA72E4A9305004D680A /* Exceptions for "life" folder in "life" target */ = {
 			isa = PBXFileSystemSynchronizedBuildFileExceptionSet;
 			membershipExceptions = (
-				engine/cell.swift,
-				engine/engine.swift,
+				framework/cell.swift,
+				framework/engine.swift,
 			);
 			target = 044E8B732E4A915C004D680A /* life */;
 		};
 		044E8BA82E4A9305004D680A /* Exceptions for "life" folder in "lifeUITests" target */ = {
 			isa = PBXFileSystemSynchronizedBuildFileExceptionSet;
 			membershipExceptions = (
-				engine/cell.swift,
-				engine/engine.swift,
+				framework/cell.swift,
+				framework/engine.swift,
 			);
 			target = 044E8B8B2E4A915D004D680A /* lifeUITests */;
 		};
