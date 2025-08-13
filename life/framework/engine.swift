@@ -6,10 +6,10 @@
 //
 
 class Engine {
-    private(set) var liveCells : Set<Cell> = []
+    private(set) var population : Set<Cell> = []
     
-    func setLiveCells(to cells: Set<Cell>) {
-        liveCells = cells
+    func setPopulation(to population: Set<Cell>) {
+        self.population = population
     }
     
     func neighbors(of cell: Cell) -> [Cell] {
@@ -27,24 +27,24 @@ class Engine {
     }
     
     func step() {
-        var neighborCounts: [Cell: Int] = [:]
-        var newLiveCells : Set<Cell> = []
+        var neighborCountMap: [Cell: Int] = [:]
+        var nextPopulation : Set<Cell> = []
         
-        for liveCell in liveCells {
-            for neighbor in neighbors(of: liveCell) {
-                neighborCounts[neighbor, default: 0] += 1
+        for cell in population {
+            for neighbor in neighbors(of: cell) {
+                neighborCountMap[neighbor, default: 0] += 1
             }
         }
         
-        for (cell, count) in neighborCounts {
+        for (cell, count) in neighborCountMap {
             /* underpopulation condition (comment for clarity)
             if (liveCells.contains(cell) && count < 2) {
                 continue
             }
             */
             // survival condition
-            if (liveCells.contains(cell) && (count == 2 || count == 3)) {
-                newLiveCells.insert(cell)
+            if (population.contains(cell) && (count == 2 || count == 3)) {
+                nextPopulation.insert(cell)
             }
             /* overpopulation condition (comment for clarity)
             if (liveCells.contains(cell) && count > 3) {
@@ -53,10 +53,10 @@ class Engine {
              */
             // reproduction condition
             if (count == 3) {
-                newLiveCells.insert(cell)
+                nextPopulation.insert(cell)
             }
         }
         
-        liveCells = newLiveCells
+        population = nextPopulation
     }
 }
