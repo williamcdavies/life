@@ -8,6 +8,15 @@
 import SwiftUI
 
 struct ContentView: View {
+    let engine = Engine()
+    let seed: Set<Cell> = [
+        Cell(x: 0, y: 0)
+    ]
+    
+    init() {
+        engine.setPopulation(to: seed)
+    }
+    
     var body: some View {
         VStack {
             Image(systemName: "globe")
