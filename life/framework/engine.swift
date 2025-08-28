@@ -5,7 +5,10 @@
 //  Created by William Chuter-Davies on 6/25/25.
 //
 
-class Engine {
+import Foundation
+
+@Observable
+class Engine{
     private(set) var population : Set<Cell> = []
     
     func setPopulation(to population: Set<Cell>) {
