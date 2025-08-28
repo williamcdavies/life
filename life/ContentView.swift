@@ -10,7 +10,9 @@ import SwiftUI
 struct ContentView: View {
     let engine = Engine()
     let seed: Set<Cell> = [
-        Cell(x: 0, y: 0)
+        Cell(x: 0, y: 0),
+        Cell(x: -1, y: 0),
+        Cell(x: 1, y: 0)
     ]
     
     init() {
@@ -19,10 +21,10 @@ struct ContentView: View {
     
     var body: some View {
         VStack {
-            Image(systemName: "globe")
-                .imageScale(.large)
-                .foregroundStyle(.tint)
-            Text("Hello, world!")
+            Button("step") {
+                engine.step()
+            }
+            Text("Live cell count: \(engine.population.count)")
         }
         .padding()
     }
